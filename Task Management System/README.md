@@ -40,7 +40,9 @@ python -m venv task
 ```
 
 Activate the virtual environment:
+
 ```
+cd "Task Management System"
 task\Scripts\activate
 ```
 Installing dependencies:
