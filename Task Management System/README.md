@@ -43,3 +43,7 @@ Activate the virtual environment:
 ```
 task\Scripts\activate
 ```
+Installing dependencies:
+```
+pip install -r requirements.txt
+```
