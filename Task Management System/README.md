@@ -33,3 +33,13 @@ task management system/
     ├── tasks.json
     └── users.json
 ```
+
+Create a virtual environment:
+```
+python -m venv task
+```
+
+Activate the virtual environment:
+```
+task\Scripts\activate
+```
