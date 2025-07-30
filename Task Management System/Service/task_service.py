@@ -23,21 +23,24 @@ class Task_Service:
          # Add the task to the task list
         self.tasks.append(task)
         
+        # Enqueue the task into the task queue
+        self.task_queue.enqueue(task)
         
-        self.task_queue(task)
+        # Return the created task
         return task
     
     def complete_task(self):
         
         # Check if the task queue is not empty
-        if not self.task_queue.is_empty:
+        if not self.task_queue.is_empty():
             
             # Remove the task from the front of the queue
             task=self.task_queue.dequeue()
             
              # Push the completed task into the history stack
             self.task_history.push(task) # We're pushing task history because it is of Stack DS
-            return task  
+            
+            return task.title  
         
         # If no task is available, return None
         return None
