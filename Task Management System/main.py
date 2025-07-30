@@ -15,8 +15,11 @@ def main():
     print((task_service.complete_task()))
     
     history=task_service.get_task_history()
-    for i in range(history.is_empty()):
+    while not history.is_empty():
+        # Keep popping from the stack until it’s empty
+        # Since task history is a stack (LIFO), the pop() calls will print tasks in reverse completion order
         print(history.pop().title)
+
     
 if __name__=="__main__":
     main()
