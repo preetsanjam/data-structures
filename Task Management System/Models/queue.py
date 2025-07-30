@@ -9,6 +9,10 @@ class Queue():
         self.items.append(item)
         
     # dequeue means to exit
+    '''
+    The reason why item is not passed to the dequeue() method is because:
+    Dequeue removes the first item — no need to specify which one
+    '''
     def dequeue(self):
         return self.items.popleft() # popleft() removes the first item
     
